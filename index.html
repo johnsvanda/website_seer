@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SEER</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/person.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/social.css">
+    <link rel="stylesheet" href="./css/checkbox.css">
+</head>
+
+<body>
+    <div id="all"></div>
+    <div id="container">
+        <nav>
+            <div id="buttons">
+                <button class="nav-button blue" id="aboutButton">ABOUT THIS SITE</button>
+                <button class="nav-button purple">JOIN THE TEAM</button>
+            </div>
+            <img src="./img/logo.png" alt="" class="logo">
+        </nav>
+
+        <header>
+            <img src="./img/Navigation.jpg" alt="header-img" class="header-img">
+            <div class="header-text">
+                <span>INSIDE SEER: THE PEOPLE</span>
+            </div>
+        </header>
+
+        <section id="filter-full">
+            <div id="filter-container">
+                <div id="show-filter">
+                    <img src="./img/arrow.png" alt="arrow-full" id="arrow-full">
+                    <b>
+                        <p>SHOW FILTER</p>
+                    </b>
+                    <span>|</span>
+                    <p id="clear-filter-full">CLEAR FILTER</p>
+                </div>
+                <div id="filter-content-full">
+                    <div id="filter-id">
+                        <span id="filter-label">
+                            BEEN TO SPAIN
+                        </span>
+                        <div id="filter-options">
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="spain1" id="spain1" class="css-checkbox">
+                                <label for="spain1" class="css-label">Yes</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="spain2" id="spain2" class="css-checkbox">
+                                <label for="spain2" class="css-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="filter-id">
+                        <span id="filter-label">
+                            HAS A CAR
+                        </span>
+                        <div id="filter-options">
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="car1" id="car1" class="css-checkbox">
+                                <label for="car1" class="css-label">Yes</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="car2" id="car2" class="css-checkbox">
+                                <label for="car2" class="css-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="filter-id">
+                        <span id="filter-label">
+                            FAVE BEER
+                        </span>
+                        <div id="filter-options">
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="beer1" id="beer1" class="css-checkbox">
+                                <label for="beer1" class="css-label">Lager</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="beer2" id="beer2" class="css-checkbox">
+                                <label for="beer2" class="css-label">APA</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="beer3" id="beer3" class="css-checkbox">
+                                <label for="beer3" class="css-label">Cheapest</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="beer4" id="beer4" class="css-checkbox">
+                                <label for="beer4" class="css-label">IPA</label>
+                                </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="beer5" id="beer5" class="css-checkbox">
+                                <label for="beer5" class="css-label">Pilsner</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="filter-id" style="margin-left:20px">
+                        <span id="filter-label">
+                            PETS
+                        </span>
+                        <div id="filter-options">
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="pet1" id="pet1" class="css-checkbox">
+                                <label for="pet1" class="css-label">Cat</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="pet2" id="pet2" class="css-checkbox">
+                                <label for="pet2" class="css-label">Dog</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="pet3" id="pet3" class="css-checkbox">
+                                <label for="pet3" class="css-label">Fish</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="filter-id">
+                        <span id="filter-label">
+                            RUN A 5K
+                        </span>
+                        <div id="filter-options">
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="run1" id="run1" class="css-checkbox">
+                                <label for="run1" class="css-label">Yes</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="run2" id="run2" class="css-checkbox">
+                                <label for="run2" class="css-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="filter-id">
+                        <span id="filter-label">
+                            HAS BICYCLE
+                        </span>
+                        <div id="filter-options">
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="bicycle1" id="bicycle" class="css-checkbox">
+                                <label for="bicycle1" class="css-label">Yes</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="bicycle2" id="bicycle2" class="css-checkbox">
+                                <label for="bicycle2" class="css-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="filter-id">
+                        <span id="filter-label">
+                            EAT SALAD
+                        </span>
+                        <div id="filter-options">
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="salad1" id="salad1" class="css-checkbox">
+                                <label for="salad1" class="css-label">Yes</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="salad2" id="salad" class="css-checkbox">
+                                <label for="salad2" class="css-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="filter-id">
+                        <span id="filter-label">
+                            OFFICE
+                        </span>
+                        <div id="filter-options">
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="office1" id="office1" class="css-checkbox">
+                                <label for="office1" class="css-label">Philly</label>
+                            </div>
+                            <div class="filter-option-full">
+                                <input type="checkbox" name="office2" id="office2" class="css-checkbox">
+                                <label for="office2" class="css-label">San Diego</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main>
+            <section id="filter">
+                <div id="open-filter">
+                    <img src="./img/arrow.png" alt="arrow" id="arrow">
+                    <span id="show-hide-filter">SHOW FILTER</span>
+                </div>
+            </section>
+
+            <section id="filter-content">
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/1.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">ALLY MALICK</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/2-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">MATT MCANEAR</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/3-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">ALLY MALICK</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/4-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">ALLY MALICK</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/4-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">ALLY MALICK</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+
+
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/1-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">ALLY MALICK</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/2-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">MATT MCANEAR</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/3-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">ALLY MALICK</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/5-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">ALLY MALICK</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/5-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">ALLY MALICK</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+
+
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/2-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">ALLY MALICK</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/3-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">MATT MCANEAR</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+                <div class="person-id">
+                    <div class="photo">
+                        <img src="./img/people/1-f.png" alt="" class="profile-photo">
+                    </div>
+                    <div class="profile-info">
+                        <b><span class="name">ALLY MALICK</span></b><br>
+                        <span class="position">PPC Associate</span>
+                    </div>
+                </div>
+
+            </section>
+
+
+        </main>
+
+        <footer>
+            <section id="social">
+
+                <div class="social-followers">
+                    <div class="fb followers">121</div>
+                    <div class="twitter followers">121</div>
+                    <div class="gplus followers">121</div>
+                    <div class="pinterest followers">121</div>
+                    <div class="linkedin followers">121</div>
+                    <div class="layers followers">121</div>
+                </div>
+
+                <div class="social-icons">
+                    <img src="./img/social/fb.png" alt="facebook" class="icon facebook">
+                    <img src="./img/social/twitter.png" alt="twitter" class="icon twitter">
+                    <img src="./img/social/gplus.png" alt="gplus" class="icon gplus">
+                    <img src="./img/social/pinterest.png" alt="pinterest" class="icon pinterest">
+                    <img src="./img/social/linkedin.png" alt="linkedin" class="icon linkedin">
+                    <img src="./img/social/layers.png" alt="layers" class="icon layers">
+                </div>
+
+            </section>
+
+            <section id="copyright">
+                <span>&copy; Copyright 2015 Seer Interactive</span>
+            </section>
+        </footer>
+    </div>
+
+
+    <!-- Hidden layers -->
+    <!-- Sidebar filter-->
+    <section id="filter-sidebar" class="filter">
+        <div id="filter-nav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+            <span id="clear-filter">CLEAR FILTER</span>
+        </div>
+
+
+        <div id="filter-box" style="margin-top:10vh;">
+            <span id="filter-label">BEEN TO SPAIN</span>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Yes</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">No</span>
+            </div>
+            <hr>
+        </div>
+        <div id="filter-box">
+            <span id="filter-label">HAS A CAR</span>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Yes</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">No</span>
+            </div>
+            <hr>
+        </div>
+        <div id="filter-box">
+            <span id="filter-label">FAVE BEER</span>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Lager</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">APA</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Cheapest</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">IPA</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Pilsner</span>
+            </div>
+            <hr>
+        </div>
+        <div id="filter-box">
+            <span id="filter-label">PETS</span>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Cat</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Dog</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Fish</span>
+            </div>
+            <hr>
+        </div>
+        <div id="filter-box">
+            <span id="filter-label">RUN A SK</span>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Yes</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">No</span>
+            </div>
+            <hr>
+        </div>
+        <div id="filter-box">
+            <span id="filter-label">HAS BICYCLE</span>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Yes</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">No</span>
+            </div>
+            <hr>
+        </div>
+        <div id="filter-box">
+            <span id="filter-label">EAT SALAD</span>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Yes</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">No</span>
+            </div>
+            <hr>
+        </div>
+        <div id="filter-box">
+            <span id="filter-label">OFFICE</span>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">Philly</span>
+            </div>
+            <div id="filter-option">
+                <input type="checkbox">
+                <span id="c1">San Diego</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeAbout()">×</a>
+        <span>SEER HUMAN SEER</span>
+        <h2 id="about-title">About this site</h2>
+        <img src="./img/horiz_line.png" alt="line" id="splitter"><br>
+        <p id="must">The Must-Have HR machine</p><br>
+        <p id="about-text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Nulla pulvinar
+            eleifend sem.
+            Praesent vitae arcu tempor neque lacinia pretium. <u>Example of in-line link Hover</u> In convallis.
+            Morbi leo mi, nonummy eget tristique non, rhoncus non leo.
+            <br><br>
+            Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Mauris elementum mauris vitae tortor.
+            Phasellus et lorem id felis nonummy placerat. Pellentesque sapien. Vivamus ac leo pretium faucibus.
+            Fusce tellus. Sed ac dolor sit amet purus malesuada congue. In rutrum. Quisque tincidunt scelerisque
+            libero.
+        </p>
+    </section>
+
+    <!-- Person -->
+    <section id="person" class="person">
+        <img src="./img/left-button.png" id="left-button" alt="left-button">
+        <img src="./img/right_button.png" id="right-button" alt="right-button">
+
+        <img src="./img/close_icon.png" alt="" class="closebtnPerson" onclick="closePerson()">
+        <div id="person-char">
+            <img src="./img/people/1.png" alt="person" id="person-photo">
+            <div id="person-name">
+                <h3 id="name">Ally Malick</h3>
+                <p><b>Role: </b>PPC expert</p>
+                <p><b>Office: </b>San Diego, CA</p>
+                <p><b>Categories: </b><span class="highlight tag">Has run 5k</span></p>
+                <p><b>Pets: </b><span class="highlight tag">Fish</span><span class="highlight tag">Cat</span></p>
+            </div>
+        </div>
+        <div id="person-text">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Temporibus autem quibusdam et aut officiis
+            debitis aut rerum necessitatibus saepe eveniet ut et <span class="highlight">voluptatem</span> quia
+            repudiandae sint et molestiae non
+            recusandae. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus.
+            <br>
+            <br>
+            Etiam sapien elit,
+            consequat eget, tristique non, venenatis quis, ante. Curabitur ligula sapien, pulvinar a vestibulum
+            quis, facilisis vel sapien. Nulla est. Integer imperdiet lectus quis justo.
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>

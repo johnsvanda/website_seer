@@ -1,0 +1,33 @@
+#about{
+    height: auto;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    margin:auto;
+    top:5vh;
+    left: 5vw;
+    background-color: #00adbb;
+    color:white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10%;
+    text-align: center;     
+}
+
+#about-text{
+    margin-top:2%;
+   margin-bottom:5%;
+}
+
+#must{
+    margin-top:1.5%;
+}
+
+#splitter{
+    margin:4%;
+    width:80%;
+}
+
+#about-title{
+    margin-top:1.5%;
+}

@@ -1,0 +1,327 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#all {
+    background-color: rgba(0, 0, 0, 0.692);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    display: none;
+    pointer-events: none;
+    overflow: hidden;
+    margin: 0;
+}
+
+
+.nav-button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: "Akzidenz Grotesk BE";
+    font-weight: bold;
+}
+
+.purple {
+    background-color: #682f64;
+}
+
+.blue {
+    background-color: #00adbb;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.header-img {
+    width: 100%;
+}
+
+.header-text {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-text span {
+    background-color: #C9602C;
+    color: white;
+    font-size: 5vw;
+    padding: 8px;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5%;
+    text-align: center;
+}
+
+
+#filter-full {
+    background-color: #F5FAFA;
+    width: 100%;
+    margin-top: 10%;
+    padding-top: 1%;
+}
+
+#filter-container {
+    width: 90%;
+    margin: auto;
+}
+
+#show-filter {
+    display: flex;
+}
+
+#show-filter span {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#clear-filter-full {
+    color: #C9602C;
+}
+
+#arrow-full {
+    margin-right: 6px;
+}
+
+#filter-content-full {
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: flex;
+
+}
+
+#filter-id {
+width:12.5%;
+}
+
+#filter-label {
+    font-size: 1em;
+    color:#00adbb;
+}
+
+#filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100px;
+    margin-top:10px;
+}
+
+.filter-option-full {
+    flex-basis: 20px;
+    margin-bottom:10px;
+}
+
+#copyright {
+    text-align: center;
+    background-color: rgb(63, 66, 70);
+    padding: 10px;
+    color: rgb(120, 123, 128);
+    margin: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+@media all and (max-width:426px) {
+
+    main {
+        margin-top: 3%;
+    }
+
+    #filter-content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5%;
+    }
+
+    #buttons {
+        margin: 0.25em;
+    }
+
+    .nav-button {
+        margin-left: 8px;
+        font-size: 3vw;
+        padding: 8px 18px;
+    }
+
+    nav {
+        background-color: white;
+        text-align: center;
+        height: auto;
+        width: 100%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    #filter {
+        margin-bottom: 5%;
+    }
+
+    #open-filter {
+        border: 1px solid #55AEBB;
+        width: 90%;
+        margin: auto;
+        padding: 4px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    #arrow {
+        margin-right: 8px;
+        height: 4vw;
+        width: 7vw;
+    }
+
+    #show-hide-filter {
+        font-weight: bold;
+        font-size: 4vw;
+    }
+
+
+
+
+}
+
+@media all and (min-width:426px) and (max-width: 850px) {
+    main {
+        margin-top: 3%;
+    }
+
+    #filter {
+        display: none;
+    }
+
+    #open-filter {
+        border: 1px solid #55AEBB;
+        width: 70%;
+        margin: auto;
+        padding: 4px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    #arrow {
+        margin-right: 8px;
+        height: 2vw;
+        width: 4vw;
+    }
+
+    #show-hide-filter {
+        font-weight: bold;
+        font-size: 2vw;
+    }
+
+    #filter-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .person-id {
+        width: 50%;
+    }
+
+    #buttons {
+        position: absolute;
+        right: 0.25em;
+    }
+
+    .nav-button {
+        padding: 10px 10px;
+        text-align: center;
+    }
+
+    nav {
+        background-color: white;
+        height: 2.75em;
+        width: 100%;
+        padding-top: 0.25em;
+        margin: auto;
+    }
+
+    .logo {
+        height: 2.5em;
+        float: left;
+        padding-left: 0.25em;
+        padding-bottom: 0.25em;
+    }
+
+
+}
+
+@media all and (min-width:850px) {
+    #filter {
+        display: none;
+    }
+
+    #filter-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .person-id {
+        width: 20%;
+    }
+
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .header-text {
+        position: absolute;
+        top: 59%;
+    }
+
+    .header-text span {
+        background-color: #C9602C;
+        color: white;
+        font-size: 5.5vw;
+        padding: 8px;
+    }
+
+    .logo {
+        margin-left: 1%;
+        height: 3vw;
+    }
+
+    .nav-button {
+        margin-right: 0.5em;
+        font-size: 1vw;
+        height: 3vw;
+        padding: 8px 10px;
+    }
+
+    nav {
+        background-color: white;
+        height: 4vw;
+        width: 90%;
+        margin: auto;
+        padding-top: 0.5vw;
+    }
+
+    #buttons {
+        float: right;
+    }
+
+}

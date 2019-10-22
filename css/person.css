@@ -1,0 +1,70 @@
+#person{
+    height: 90vh;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 5vh;
+    left: 5vw;
+    color:black;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.2s;
+    padding-top: 60px;
+    text-align: center;      
+}
+
+.closebtnPerson{
+    color:blue;
+    text-decoration:none;
+    font-size:2em;
+    position: sticky;
+    left:100%;
+    top:0;  
+}
+
+#person-name{
+    margin-top:5%;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+}
+.person-id {
+    margin-bottom: 3%;
+}
+
+#name{
+    color:orange;
+}
+#person-text{
+    margin-top:5%;
+}
+
+
+.tag{
+    margin:10px;
+}
+
+.highlight  {
+    color:#00adbb;
+}
+
+#name{
+    font-size:1.7em;
+}
+
+
+#right-button{
+    position: fixed;
+    right:1.5%;
+    top:35%;
+    display:none;
+    width:10vw;
+}
+
+#left-button{
+    position: fixed;
+    left:1.5%;
+    top:35%;
+    display:none;
+    width:10vw;
+}

@@ -1,0 +1,27 @@
+
+#social {
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+.social-followers {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.followers {
+    border: 1px solid gray;
+    background-color: rgb(161, 161, 161);
+    padding: 7px;
+    margin: 2.5px;
+    font-size: 1rem;
+}
+
+.icon {
+    margin: 2.7px;
+}
