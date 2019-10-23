@@ -73,11 +73,13 @@ main {
     width: 100%;
     margin-top: 10%;
     padding-top: 1%;
+    
 }
 
 #filter-container {
     width: 90%;
     margin: auto;
+    margin-left:10%;
 }
 
 #show-filter {
@@ -101,16 +103,18 @@ main {
     padding-top: 1.5%;
     padding-bottom: 1.5%;
     display: flex;
+    flex-wrap: wrap;
+    text-align: left;
 
 }
 
 #filter-id {
-width:12.5%;
+    width: 147px;
 }
 
 #filter-label {
     font-size: 1em;
-    color:#00adbb;
+    color: #00adbb;
 }
 
 #filter-options {
@@ -118,12 +122,12 @@ width:12.5%;
     flex-wrap: wrap;
     flex-direction: column;
     height: 100px;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 .filter-option-full {
     flex-basis: 20px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 #copyright {
@@ -139,6 +143,9 @@ width:12.5%;
 
 @media all and (max-width:426px) {
 
+    #filter-full{
+        display:none;
+    }
     main {
         margin-top: 3%;
     }
@@ -264,7 +271,14 @@ width:12.5%;
         padding-bottom: 0.25em;
     }
 
+    #filter-full {
+        margin-top: 0%;
+        margin-left:10%;
+    }
 
+    #filter-container{
+        margin-left:0%;
+    }
 }
 
 @media all and (min-width:850px) {
