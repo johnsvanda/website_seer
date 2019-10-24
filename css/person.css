@@ -1,70 +1,129 @@
-#person{
-    height: 90vh;
+#person {
+    height: auto;
     width: 0;
     position: fixed;
     z-index: 3;
     top: 5vh;
     left: 5vw;
-    color:black;
+    color: black;
     background-color: white;
     overflow-x: hidden;
     transition: 0.2s;
-    padding-top: 60px;
-    text-align: center;      
+    padding-top: 40px;
+    text-align: center;
 }
 
-.closebtnPerson{
-    color:blue;
-    text-decoration:none;
-    font-size:2em;
-    position: sticky;
-    left:100%;
-    top:0;  
+.closebtnPerson {
+    color: blue;
+    text-decoration: none;
+    font-size: 2em;
+    position: absolute;
+    right:15px;
+    top: 15px;
 }
 
-#person-name{
-    margin-top:5%;
-    display:flex;
+#person-name {
+    margin-top: 5%;
+    display: flex;
     flex-direction: column;
-    text-align:center;
-}
-.person-id {
-    margin-bottom: 3%;
-}
-
-#name{
-    color:orange;
-}
-#person-text{
-    margin-top:5%;
+    text-align: center;
 }
 
 
-.tag{
-    margin:10px;
+#name {
+    color: orange;
 }
 
-.highlight  {
-    color:#00adbb;
-}
-
-#name{
-    font-size:1.7em;
+#person-text {
+    margin-top: 5%;
 }
 
 
-#right-button{
+.tag {
+    margin: 10px;
+}
+
+.highlight {
+    color: #00adbb;
+}
+
+#name {
+    font-size: 1.7em;
+}
+
+
+#right-button {
     position: fixed;
-    right:1.5%;
-    top:35%;
-    display:none;
-    width:10vw;
+    right: 1.5%;
+    top: 35%;
+    display: none;
+    width: 10vw;
 }
 
-#left-button{
+#left-button {
     position: fixed;
-    left:1.5%;
-    top:35%;
-    display:none;
-    width:10vw;
+    left: 1.5%;
+    top: 35%;
+    display: none;
+    width: 10vw;
+}
+
+@media all and (min-width:426px) and (max-width: 850px) {
+    #person {
+        height: 40vh;
+    }
+
+    #person-char{
+        display:flex;
+    }
+    #person-name {
+    position: absolute;
+    left:30%;   
+    top:0;
+    text-align: left;
+    line-height: 2.1em;
+    }
+
+    #right-button {
+        position: fixed;
+        right: 1.5%;
+        top: 22.5%;
+        display: none;
+        width: 6vw;
+    }
+
+    #left-button {
+        position: fixed;
+        left: 1.5%;
+        top: 22.5%;
+        display: none;
+        width: 6vw;
+    }
+    #person-text{
+        margin-top:8%;
+    }
+
+}
+
+@media all and (min-width:850px) {
+
+    #person {
+        height: 40vh;
+    }
+    
+    #right-button {
+        position: fixed;
+        right: 1.5%;
+        top: 22.5%;
+        display: none;
+        width: 6vw;
+    }
+
+    #left-button {
+        position: fixed;
+        left: 1.5%;
+        top: 22.5%;
+        display: none;
+        width: 6vw;
+    }
 }

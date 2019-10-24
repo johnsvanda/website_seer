@@ -72,7 +72,7 @@ function closeSidebar() {
 
 function openAbout() {
     aboutBool = true;
-    document.getElementById("about").style.width = "90vw";
+    document.getElementById("about").style.width = "60vw";
     document.getElementById("about").style.padding = "2em";
     document.getElementById("all").style.display = "block";
     disableScroll();
@@ -89,7 +89,15 @@ function closeAbout() {
 
 function openPerson() {
     personBool = true;
-    document.getElementById("person").style.width = "90vw";
+
+    if(window.matchMedia( "(min-width: 850px)" ).matches){
+
+        document.getElementById("person").style.width = "60vw";
+    }
+    else{
+
+        document.getElementById("person").style.width = "90vw";
+    }
     document.getElementById("person").style.padding = "2em";
     document.getElementById("all").style.display = "block";
     document.getElementById("right-button").style.display = "block";

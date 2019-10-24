@@ -72,7 +72,7 @@ main {
     background-color: #F5FAFA;
     width: 100%;
     margin-top: 10%;
-    padding-top: 1%;
+    padding-top: 3%;
     
 }
 
@@ -110,6 +110,7 @@ main {
 
 #filter-id {
     width: 147px;
+    margin-bottom:19px;
 }
 
 #filter-label {
@@ -128,6 +129,10 @@ main {
 .filter-option-full {
     flex-basis: 20px;
     margin-bottom: 10px;
+}
+
+.person-id {
+    margin-bottom: 3%;
 }
 
 #copyright {
@@ -202,28 +207,21 @@ main {
         font-size: 4vw;
     }
 
-
+    #copyright{
+        margin-top:10%;
+    }
 
 
 }
 
 @media all and (min-width:426px) and (max-width: 850px) {
     main {
-        margin-top: 3%;
+        margin-top:5%;
+        margin-bottom:5%;
     }
 
     #filter {
         display: none;
-    }
-
-    #open-filter {
-        border: 1px solid #55AEBB;
-        width: 70%;
-        margin: auto;
-        padding: 4px;
-        height: auto;
-        display: flex;
-        justify-content: center;
     }
 
     #arrow {
@@ -272,12 +270,12 @@ main {
     }
 
     #filter-full {
-        margin-top: 0%;
-        margin-left:10%;
+        margin-top: -1%;
     }
 
     #filter-container{
-        margin-left:0%;
+        padding-top:5%;
+        margin-left:10%;    
     }
 }
 

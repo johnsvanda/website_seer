@@ -1,33 +1,40 @@
-#about{
-    height: auto;
-    width: 0;
+#about {
+    height: 90vh;
+    width:0;
     position: fixed;
     z-index: 3;
-    margin:auto;
+    left:20vw;
     top:5vh;
-    left: 5vw;
     background-color: #00adbb;
-    color:white;
+    color: white;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 10%;
-    text-align: center;     
+    text-align: center;
 }
 
-#about-text{
-    margin-top:2%;
-   margin-bottom:5%;
+#about-text {
+    
 }
 
-#must{
-    margin-top:1.5%;
+#splitter {
+    width:30vw;
+    margin-top:4px;
+    margin-bottom:4px;
 }
 
-#splitter{
-    margin:4%;
-    width:80%;
+#about-title {
+    margin-top: 1.5%;
 }
 
-#about-title{
-    margin-top:1.5%;
+@media all and (min-width:850px) {
+    #splitter {
+        width: 20vw;
+        margin:8px;
+    }
+
+    #about {
+        margin-top:5%;
+        height: auto;
+    }
 }
