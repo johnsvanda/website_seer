@@ -18,7 +18,7 @@
     text-decoration: none;
     font-size: 2em;
     position: absolute;
-    right:15px;
+    right: 15px;
     top: 15px;
 }
 
@@ -29,13 +29,16 @@
     text-align: center;
 }
 
-
+#person-photo{
+    width:200px;
+}
 #name {
     color: orange;
 }
 
 #person-text {
     margin-top: 5%;
+    text-align:left;
 }
 
 
@@ -68,26 +71,31 @@
     width: 10vw;
 }
 
-@media all and (min-width:426px) and (max-width: 850px) {
+@media all and (min-width:426px) {
+
+}
+
+@media all and (min-width:518px) and (max-width: 850px) {
     #person {
-        height: 40vh;
+        height: auto;
     }
 
-    #person-char{
-        display:flex;
+    #person-char {
+        display: flex;
     }
+
     #person-name {
-    position: absolute;
-    left:30%;   
-    top:0;
-    text-align: left;
-    line-height: 2.1em;
+        left: 30%;
+        top: 0;
+        margin-left:2em;
+        text-align: left;
+        line-height: 2.1em;
     }
 
     #right-button {
         position: fixed;
         right: 1.5%;
-        top: 22.5%;
+        top: 30%;
         display: none;
         width: 6vw;
     }
@@ -95,12 +103,13 @@
     #left-button {
         position: fixed;
         left: 1.5%;
-        top: 22.5%;
+        top: 30%;
         display: none;
         width: 6vw;
     }
-    #person-text{
-        margin-top:8%;
+
+    #person-text {
+        margin-top: 5%;
     }
 
 }
@@ -108,22 +117,35 @@
 @media all and (min-width:850px) {
 
     #person {
-        height: 40vh;
+        height: auto;
+        top: 15vh;
+        left: 22.5vw;
     }
-    
+
+    #person-char {
+        display: flex;
+    }
+
     #right-button {
         position: fixed;
-        right: 1.5%;
-        top: 22.5%;
+        right: 21.2%;
+        top: 32%;
         display: none;
-        width: 6vw;
+        width: 2.5vw;
     }
 
     #left-button {
         position: fixed;
-        left: 1.5%;
-        top: 22.5%;
+        left: 21.2%;
+        top: 32%;
         display: none;
-        width: 6vw;
+        width: 2.5vw;
     }
+
+    #person-name{
+        text-align:left;
+        margin-left:1em;
+        line-height: 2em;
+    }
+
 }

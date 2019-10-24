@@ -1,10 +1,10 @@
 #about {
     height: 90vh;
-    width:0;
+    width: 0;
     position: fixed;
     z-index: 3;
-    left:20vw;
-    top:5vh;
+    left: 20vw;
+    top: 5vh;
     background-color: #00adbb;
     color: white;
     overflow-x: hidden;
@@ -13,28 +13,32 @@
     text-align: center;
 }
 
-#about-text {
-    
-}
+#about-text {}
 
 #splitter {
-    width:30vw;
-    margin-top:4px;
-    margin-bottom:4px;
+    width: 30vw;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 #about-title {
     margin-top: 1.5%;
 }
 
+@media all and (min-width:426px) and (max-width: 850px) {
+    #about {
+        height: auto;
+    }
+}
+
 @media all and (min-width:850px) {
     #splitter {
         width: 20vw;
-        margin:8px;
+        margin: 8px;
     }
 
     #about {
-        margin-top:5%;
+        margin-top: 5%;
         height: auto;
     }
 }

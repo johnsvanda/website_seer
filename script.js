@@ -31,23 +31,23 @@ document.addEventListener("click", function (e) {
     else if (sidebar == false && (e.target.id == "open-filter" || e.target.id == "arrow" || e.target.id == "show-hide-filter")) {
         openSidebar();
     }
-    else if (aboutBool == true && (e.target.className != "about")){
+    else if (aboutBool == true && (e.target.className != "about")) {
         closeAbout();
     }
 
-    else if (aboutBool == false && e.target.id == "aboutButton"){
+    else if (aboutBool == false && e.target.id == "aboutButton") {
         openAbout();
     }
-    else if (personBool == true && (e.target.className != "person")){
+    else if (personBool == true && (e.target.className != "person")) {
         closePerson();
         console.log(e);
     }
 
-    else if (personBool == false && e.target.className == "profile-photo"){
+    else if (personBool == false && e.target.className == "profile-photo") {
         openPerson();
     }
 
-    
+
 })
 
 function openSidebar() {
@@ -76,7 +76,7 @@ function openAbout() {
     document.getElementById("about").style.padding = "2em";
     document.getElementById("all").style.display = "block";
     disableScroll();
-    
+
 }
 
 function closeAbout() {
@@ -84,20 +84,29 @@ function closeAbout() {
     document.getElementById("about").style.width = "0";
     document.getElementById("about").style.padding = "0";
     document.getElementById("all").style.display = "none";
-    allowScroll();   
+    allowScroll();
 }
 
 function openPerson() {
     personBool = true;
 
-    if(window.matchMedia( "(min-width: 850px)" ).matches){
+    const mq = window.matchMedia("(min-width: 850px)");
 
-        document.getElementById("person").style.width = "60vw";
-    }
-    else{
-
+    if (mq.matches) {
+        document.getElementById("person").style.width = "55vw";
+    } else {
         document.getElementById("person").style.width = "90vw";
     }
+
+    window.onresize = function () {
+        if (mq.matches && document.getElementById("person").style.padding == "2em") {
+            document.getElementById("person").style.width = "55vw";
+        }
+        else if(document.getElementById("person").style.padding == "2em"){
+            document.getElementById("person").style.width = "90vw";
+        }
+    }
+
     document.getElementById("person").style.padding = "2em";
     document.getElementById("all").style.display = "block";
     document.getElementById("right-button").style.display = "block";
@@ -115,12 +124,12 @@ function closePerson() {
     allowScroll()
 }
 
-function disableScroll(){
+function disableScroll() {
     container.style.position = "fixed";
-    container.style.overflow = "hidden"; 
+    container.style.overflow = "hidden";
 }
 
-function allowScroll(){
+function allowScroll() {
     container.style.position = "relative";
-    container.style.overflow = "scroll"; 
+    container.style.overflow = "scroll";
 }
