@@ -1,5 +1,5 @@
 let container = document.getElementById("container");
-
+const mq = window.matchMedia("(min-width: 850px)");
 var sidebar = false;
 var aboutBool = false;
 var personBool = false;
@@ -23,7 +23,6 @@ for (var i = 0; i < personAll.length; i++) {
 }
 
 document.addEventListener("click", function (e) {
-    console.log(e);
     if (sidebar == true && (e.target.className != "filter")) {
         console.log(e);
         closeSidebar();
@@ -72,10 +71,16 @@ function closeSidebar() {
 
 function openAbout() {
     aboutBool = true;
-    document.getElementById("about").style.width = "60vw";
     document.getElementById("about").style.padding = "2em";
     document.getElementById("all").style.display = "block";
     disableScroll();
+
+    if(mq.matches){
+        document.getElementById("about").style.width = "60vw";
+    }
+    else if(!mq.matches){
+        document.getElementById("about").style.width = "90vw";
+    }
 
 }
 
@@ -90,28 +95,23 @@ function closeAbout() {
 function openPerson() {
     personBool = true;
 
-    const mq = window.matchMedia("(min-width: 850px)");
-
-    if (mq.matches) {
-        document.getElementById("person").style.width = "55vw";
-    } else {
-        document.getElementById("person").style.width = "90vw";
-    }
-
-    window.onresize = function () {
-        if (mq.matches && document.getElementById("person").style.padding == "2em") {
-            document.getElementById("person").style.width = "55vw";
-        }
-        else if(document.getElementById("person").style.padding == "2em"){
-            document.getElementById("person").style.width = "90vw";
-        }
-    }
-
     document.getElementById("person").style.padding = "2em";
     document.getElementById("all").style.display = "block";
     document.getElementById("right-button").style.display = "block";
     document.getElementById("left-button").style.display = "block";
     disableScroll();
+    
+    document.getElementById("button-void").style.display = "block";
+    
+    if (mq.matches) {
+        document.getElementById("person").style.width = "55vw";
+    } 
+    else if(!mq.matches){
+        document.getElementById("person").style.width = "90vw";
+    }
+    
+    document.getElementById("button-void").style.height = document.getElementById("person").offsetHeight + "px";
+
 }
 
 function closePerson() {
@@ -121,6 +121,7 @@ function closePerson() {
     document.getElementById("all").style.display = "none";
     document.getElementById("right-button").style.display = "none";
     document.getElementById("left-button").style.display = "none";
+    document.getElementById("button-void").style.display = "none";
     allowScroll()
 }
 
@@ -132,4 +133,31 @@ function disableScroll() {
 function allowScroll() {
     container.style.position = "relative";
     container.style.overflow = "scroll";
+}
+
+//maintaining thickbox responsivity 
+window.onresize = function () {
+
+    //align buttons responsively
+    document.getElementById("button-void").style.height = document.getElementById("person").offsetHeight + "px";
+   
+    //if width is min-width:850px and #person is open
+    if (mq.matches && personBool == true) {
+        document.getElementById("person").style.width = "55vw";
+
+    }
+    //else #person
+    else if (personBool) {
+        document.getElementById("person").style.width = "90vw";
+    }
+
+    else if (mq.matches && aboutBool){
+        document.getElementById("about").style.left = "20vw";
+        document.getElementById("about").style.width = "60vw";
+    }
+    
+    else if (aboutBool){
+        document.getElementById("about").style.left = "5vw";
+        document.getElementById("about").style.width = "90vw";
+    }
 }

@@ -1,3 +1,29 @@
+#button-void{
+    width: 90vw;
+    position: fixed;
+    z-index: 4;
+    top: 5vh;
+    left: 5vw;
+}
+
+#right-button {
+    position: absolute;
+    right: -1.5vw;
+    top: 50%;
+    width: 4vh;
+    z-index: 4;
+    display:none;
+}
+
+#left-button {
+    position: absolute;
+    left: -1.5vw;
+    top: 50%;
+    width: 4vh;
+    z-index: 4;
+    display:none;
+}
+
 #person {
     height: auto;
     width: 0;
@@ -8,7 +34,6 @@
     color: black;
     background-color: white;
     overflow-x: hidden;
-    transition: 0.2s;
     padding-top: 40px;
     text-align: center;
 }
@@ -55,31 +80,13 @@
 }
 
 
-#right-button {
-    position: fixed;
-    right: 1.5%;
-    top: 35%;
-    display: none;
-    width: 10vw;
-}
-
-#left-button {
-    position: fixed;
-    left: 1.5%;
-    top: 35%;
-    display: none;
-    width: 10vw;
-}
 
 @media all and (min-width:426px) {
 
 }
 
 @media all and (min-width:518px) and (max-width: 850px) {
-    #person {
-        height: auto;
-    }
-
+    
     #person-char {
         display: flex;
     }
@@ -92,21 +99,6 @@
         line-height: 2.1em;
     }
 
-    #right-button {
-        position: fixed;
-        right: 1.5%;
-        top: 30%;
-        display: none;
-        width: 6vw;
-    }
-
-    #left-button {
-        position: fixed;
-        left: 1.5%;
-        top: 30%;
-        display: none;
-        width: 6vw;
-    }
 
     #person-text {
         margin-top: 5%;
@@ -115,6 +107,13 @@
 }
 
 @media all and (min-width:850px) {
+    #button-void{
+        width: 55vw;
+        position: fixed;
+        z-index: 4;
+        top: 15vh;
+        left: 22.5vw;
+    }
 
     #person {
         height: auto;
@@ -124,22 +123,6 @@
 
     #person-char {
         display: flex;
-    }
-
-    #right-button {
-        position: fixed;
-        right: 21.2%;
-        top: 32%;
-        display: none;
-        width: 2.5vw;
-    }
-
-    #left-button {
-        position: fixed;
-        left: 21.2%;
-        top: 32%;
-        display: none;
-        width: 2.5vw;
     }
 
     #person-name{
