@@ -1,34 +1,32 @@
 let container = document.getElementById("container");
 const mq = window.matchMedia("(min-width: 850px)");
-var sidebar = false;
+var filterBool = true;
 var aboutBool = false;
 var personBool = false;
 
-var filter = document.getElementById("filter-sidebar");
-var filterAll = filter.querySelectorAll("*");
-for (var i = 0; i < filterAll.length; i++) {
-    filterAll[i].classList.add("filter");
+
+
+addClass("about");
+addClass("person");
+
+function addClass(classs){
+    let classElements = document.getElementById(classs).querySelectorAll("*")
+    console.log(classElements);
+    for (var i = 0; i < classElements.length; i++) {
+        classElements[i].classList.add(classs);
+    }
 }
 
-var about = document.getElementById("about");
-var aboutAll = about.querySelectorAll("*");
-for (var i = 0; i < aboutAll.length; i++) {
-    aboutAll[i].classList.add("about");
-}
 
-var person = document.getElementById("person");
-var personAll = person.querySelectorAll("*");
-for (var i = 0; i < personAll.length; i++) {
-    personAll[i].classList.add("person");
-}
 
 document.addEventListener("click", function (e) {
-    if (sidebar == true && (e.target.className != "filter")) {
-        console.log(e);
-        closeSidebar();
+    console.log(e.target);
+
+    if (filterBool == true && (e.target.id == "arrow" || e.target.id == "show")) {
+        closeFilter();
     }
-    else if (sidebar == false && (e.target.id == "open-filter" || e.target.id == "arrow" || e.target.id == "show-hide-filter")) {
-        openSidebar();
+    else if (filterBool == false && (e.target.id && "arrow" || e.target.id == "show")) {
+        openFilter();
     }
     else if (aboutBool == true && (e.target.className != "about")) {
         closeAbout();
@@ -42,43 +40,24 @@ document.addEventListener("click", function (e) {
         console.log(e);
     }
 
-    else if (personBool == false && e.target.className == "profile-photo") {
+    else if (personBool == false && e.target.className == "person-photo") {
         openPerson();
     }
 
 
 })
 
-function openSidebar() {
-    sidebar = true;
-    document.getElementById("filter-sidebar").style.width = "80vw";
-    document.getElementById("filter-sidebar").style.padding = "10px";
-    document.getElementById("show-hide-filter").textContent = "HIDE FILTER";
-    document.getElementById("arrow").setAttribute('style', 'transform:rotate(180deg)');
-    document.getElementById("all").style.display = "block";
-    disableScroll();
-}
-
-function closeSidebar() {
-    sidebar = false;
-    document.getElementById("filter-sidebar").style.width = "0";
-    document.getElementById("filter-sidebar").style.padding = "0";
-    document.getElementById("show-hide-filter").textContent = "SHOW FILTER";
-    document.getElementById("arrow").setAttribute('style', 'transform:rotate(0deg)');
-    document.getElementById("all").style.display = "none";
-    allowScroll();
-}
-
 function openAbout() {
     aboutBool = true;
-    document.getElementById("about").style.padding = "2em";
+    document.getElementById("about").style.padding = "3em";
     document.getElementById("all").style.display = "block";
+    document.getElementById("closebtn").style.display = "block";
     disableScroll();
 
-    if(mq.matches){
-        document.getElementById("about").style.width = "60vw";
+    if (mq.matches) {
+        document.getElementById("about").style.width = "70vw";
     }
-    else if(!mq.matches){
+    else if (!mq.matches) {
         document.getElementById("about").style.width = "90vw";
     }
 
@@ -89,6 +68,7 @@ function closeAbout() {
     document.getElementById("about").style.width = "0";
     document.getElementById("about").style.padding = "0";
     document.getElementById("all").style.display = "none";
+    document.getElementsByTagName("body")[0].style.overflowX = "hidden";
     allowScroll();
 }
 
@@ -100,16 +80,16 @@ function openPerson() {
     document.getElementById("right-button").style.display = "block";
     document.getElementById("left-button").style.display = "block";
     disableScroll();
-    
+
     document.getElementById("button-void").style.display = "block";
-    
+
     if (mq.matches) {
         document.getElementById("person").style.width = "55vw";
-    } 
-    else if(!mq.matches){
+    }
+    else if (!mq.matches) {
         document.getElementById("person").style.width = "90vw";
     }
-    
+
     document.getElementById("button-void").style.height = document.getElementById("person").offsetHeight + "px";
 
 }
@@ -135,12 +115,31 @@ function allowScroll() {
     container.style.overflow = "scroll";
 }
 
+function closeFilter() {
+    filterBool = false;
+    document.getElementById("filter-content").style.display = "none";
+    document.getElementById("show").textContent = "SHOW FILTER";
+    document.getElementById("arrow").style.transform = 'rotate(180deg)';
+}
+function openFilter() {
+    filterBool = true;
+    document.getElementById("filter-content").style.display = "flex";
+    document.getElementById("show").textContent = "HIDE FILTER";
+    document.getElementById("arrow").style.transform = 'rotate(360deg)';
+}
+
+function clearFilter() {
+    var clist = document.getElementsByTagName("input");
+    for (var i = 0; i < clist.length; ++i) { clist[i].checked = false; }
+}
 //maintaining thickbox responsivity 
 window.onresize = function () {
 
     //align buttons responsively
-    document.getElementById("button-void").style.height = document.getElementById("person").offsetHeight + "px";
-   
+    if (personBool) {
+        document.getElementById("button-void").style.height = document.getElementById("person").offsetHeight + "px";
+    }
+
     //if width is min-width:850px and #person is open
     if (mq.matches && personBool == true) {
         document.getElementById("person").style.width = "55vw";
@@ -151,12 +150,12 @@ window.onresize = function () {
         document.getElementById("person").style.width = "90vw";
     }
 
-    else if (mq.matches && aboutBool){
+    else if (mq.matches && aboutBool) {
         document.getElementById("about").style.left = "20vw";
         document.getElementById("about").style.width = "60vw";
     }
-    
-    else if (aboutBool){
+
+    else if (aboutBool) {
         document.getElementById("about").style.left = "5vw";
         document.getElementById("about").style.width = "90vw";
     }

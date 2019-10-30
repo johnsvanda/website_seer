@@ -1,0 +1,49 @@
+#people {
+    padding-top: 1.5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Akzidenz Grotesk BE', sans-serif;
+    color: #4b4e53;
+    width: 80%;
+    margin: auto;
+    margin-top: 1.5%;
+}
+
+.person-unit {
+    margin-bottom: 3%;
+    width: 170px;
+}
+
+
+.position{
+    font-size:14px;
+}
+
+
+.profile-photo{
+    margin-bottom:0.3em;
+}
+@media all and (max-width:426px) {
+
+    #people {
+        margin-top: 3%;
+    }
+}
+
+@media all and (min-width:426px) and (max-width: 850px) {
+    #people {
+        margin-top: 5%;
+    }
+    .person-unit {
+        width: 50%;
+    }
+}
+
+@media all and (min-width:850px) {
+
+    .person-unit {
+        width: 240px;
+    }
+}

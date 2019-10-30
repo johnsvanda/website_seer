@@ -1,0 +1,120 @@
+#filter {
+    background-color: #F5FAFA;
+    width: 100%;
+    margin-top: 10%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+#filter-container {
+    width: 80%;
+    margin: auto;
+    font-family: 'Akzidenz Grotesk BE', sans-serif;
+}
+
+#show-filter {
+    display: flex;
+    font-size: 14px;
+}
+
+#show-filter span {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#clear-filter {
+    color: #C9602C;
+
+}
+
+#arrow {
+    margin-right: 6px;
+}
+
+#filter-content {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+#filter-unit {
+    flex-basis: 8em;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+#filter-unit-big {
+    flex-basis: 16em;
+    flex-grow: 2;
+}
+
+#filter-label {
+    font-size: 14px;
+    line-height: 32px;
+    color: #00adbb;
+    font-weight: 550;
+}
+
+#filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100px;
+    margin-top: 10px;
+    margin-right: 4em;
+}
+
+.filter-option {
+    flex-basis: 20px;
+    margin-bottom: 10px;
+}
+
+
+@media all and (max-width:426px) {
+    #filter {
+        padding-top: 1em;
+        margin-top: -1%;
+    }
+
+    #open-filter {
+        border: 1px solid #55AEBB;
+        width: 90%;
+        margin: auto;
+        padding: 4px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    #show-hide-filter {
+        font-weight: bold;
+        font-size: 4vw;
+    }
+
+    #filter-container {
+        margin:auto;
+    }
+
+}
+
+@media all and (min-width:426px) and (max-width: 850px) {
+
+
+
+    #show-hide-filter {
+        font-weight: bold;
+        font-size: 2vw;
+    }
+
+
+    #filter {
+        margin-top: -1%;
+        padding-top: 1em;
+    }
+
+
+}

@@ -1,4 +1,4 @@
-#button-void{
+#button-void {
     width: 90vw;
     position: fixed;
     z-index: 4;
@@ -8,20 +8,29 @@
 
 #right-button {
     position: absolute;
-    right: -1.5vw;
+    right: -1.5em;
     top: 50%;
-    width: 4vh;
+    width: 3em;
     z-index: 4;
-    display:none;
+    display: none;
 }
 
 #left-button {
     position: absolute;
-    left: -1.5vw;
+    left: -1.5em;
     top: 50%;
-    width: 4vh;
+    width: 3em;
     z-index: 4;
-    display:none;
+    display: none;
+}
+
+.closebtnPerson {
+    color: blue;
+    text-decoration: none;
+    font-size: 2em;
+    position: absolute;
+    right: 15px;
+    top: 15px;
 }
 
 #person {
@@ -36,34 +45,32 @@
     overflow-x: hidden;
     padding-top: 40px;
     text-align: center;
+    font-family: 'Akzidenz Grotesk BE', sans-serif;
+    font-size: 1.4em;
 }
 
-.closebtnPerson {
-    color: blue;
-    text-decoration: none;
-    font-size: 2em;
-    position: absolute;
-    right: 15px;
-    top: 15px;
+
+
+
+#person-photo {
+    width: 12vw;
+    height: auto;
 }
 
-#person-name {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-#person-photo{
-    width:200px;
-}
 #name {
-    color: orange;
+    color: #C9602C;
+    padding-bottom: 0.5em;
+    font-family: "Sanchez";
+    font-size: 35px;
+    font-weight: 400;
 }
 
 #person-text {
-    margin-top: 5%;
-    text-align:left;
+    margin-top: 2%;
+    text-align: left;
+    font-size: 18px;
+    line-height: 27px;
+    color: #4b4e53;
 }
 
 
@@ -75,26 +82,38 @@
     color: #00adbb;
 }
 
-#name {
-    font-size: 1.7em;
-}
 
+@media all and (max-width:644px) {
+    hr {
+        display: none;
+    }
 
+    #person-photo {
+        width: 8em;
+        height: 8em;
+    }
 
-@media all and (min-width:426px) {
-
-}
-
-@media all and (min-width:518px) and (max-width: 850px) {
     
+
+    #person-info {
+        line-height: 40px;
+        text-align: center;
+    }
+}
+
+
+
+@media all and (min-width:644px) and (max-width: 850px) {
+
+
     #person-char {
         display: flex;
     }
 
-    #person-name {
+    #person-info {
         left: 30%;
         top: 0;
-        margin-left:2em;
+        margin-left: 2em;
         text-align: left;
         line-height: 2.1em;
     }
@@ -104,10 +123,22 @@
         margin-top: 5%;
     }
 
+    #person-photo {
+        width: 8em;
+        height: 8em;
+    }
+
+    hr {
+        border: none;
+        border-left: 3px solid #E3E3E3;
+        height: 12em;
+        margin-left: 20px;
+    }
 }
 
 @media all and (min-width:850px) {
-    #button-void{
+
+    #button-void {
         width: 55vw;
         position: fixed;
         z-index: 4;
@@ -125,10 +156,21 @@
         display: flex;
     }
 
-    #person-name{
-        text-align:left;
-        margin-left:1em;
-        line-height: 2em;
+    #person-info {
+        text-align: left;
+        margin-left: 1em;
+        line-height: 50px;
     }
 
+    #person-photo {
+        width: 8em;
+        height: 8em;
+    }
+
+    hr {
+        border: none;
+        border-left: 3px solid #E3E3E3;
+        height: 12em;
+        margin-left: 20px;
+    }
 }

@@ -6,12 +6,16 @@
     box-sizing: border-box;
 }
 
+html,body{
+    overflow-x:hidden;
+}
+
 #all {
     background-color: rgba(0, 0, 0, 0.692);
     width: 100%;
     height: 100%;
-    position: fixed;
-    z-index: 2;
+    position: absolute;
+    z-index: 1;
     display: none;
     pointer-events: none;
     overflow: hidden;
@@ -23,8 +27,9 @@
     border: none;
     border-radius: 5px;
     color: white;
-    font-family: "Akzidenz Grotesk BE";
+    font-family: 'Akzidenz Grotesk BE', sans-serif;
     font-weight: bold;
+
 }
 
 .purple {
@@ -51,115 +56,30 @@ header {
     top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: "Sanchez";
+    font-size: 5vw;
 }
 
 .header-text span {
     background-color: #C9602C;
     color: white;
-    font-size: 5vw;
     padding: 8px;
-}
-
-main {
-    width: 80%;
-    margin: auto;
-    margin-top: 1.5%;
-    text-align: center;
+    font-weight: 400;
 }
 
 
-#filter-full {
-    background-color: #F5FAFA;
-    width: 100%;
-    margin-top: 10%;
-    padding-top: 3%;
-    
-}
-
-#filter-container {
-    width: 90%;
-    margin: auto;
-    margin-left:10%;
-}
-
-#show-filter {
-    display: flex;
-}
-
-#show-filter span {
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-#clear-filter-full {
-    color: #C9602C;
-}
-
-#arrow-full {
-    margin-right: 6px;
-}
-
-#filter-content-full {
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: left;
-
-}
-
-#filter-id {
-    width: 147px;
-    margin-bottom:19px;
-}
-
-#filter-label {
-    font-size: 1em;
-    color: #00adbb;
-}
-
-#filter-options {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: 100px;
-    margin-top: 10px;
-}
-
-.filter-option-full {
-    flex-basis: 20px;
-    margin-bottom: 10px;
-}
-
-.person-id {
-    margin-bottom: 3%;
-}
-
-#copyright {
+#footer {
     text-align: center;
     background-color: rgb(63, 66, 70);
     padding: 10px;
     color: rgb(120, 123, 128);
     margin: 0;
     bottom: 0;
-    position: fixed;
+    position: relative;
     width: 100%;
 }
 
 @media all and (max-width:426px) {
-
-    #filter-full{
-        display:none;
-    }
-    main {
-        margin-top: 3%;
-    }
-
-    #filter-content {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 5%;
-    }
 
     #buttons {
         margin: 0.25em;
@@ -182,67 +102,11 @@ main {
         display: none;
     }
 
-    #filter {
-        margin-bottom: 5%;
-    }
-
-    #open-filter {
-        border: 1px solid #55AEBB;
-        width: 90%;
-        margin: auto;
-        padding: 4px;
-        height: auto;
-        display: flex;
-        justify-content: center;
-    }
-
-    #arrow {
-        margin-right: 8px;
-        height: 4vw;
-        width: 7vw;
-    }
-
-    #show-hide-filter {
-        font-weight: bold;
-        font-size: 4vw;
-    }
-
-    #copyright{
-        margin-top:10%;
-    }
-
 
 }
 
 @media all and (min-width:426px) and (max-width: 850px) {
-    main {
-        margin-top:5%;
-        margin-bottom:5%;
-    }
-
-    #filter {
-        display: none;
-    }
-
-    #arrow {
-        margin-right: 8px;
-        height: 2vw;
-        width: 4vw;
-    }
-
-    #show-hide-filter {
-        font-weight: bold;
-        font-size: 2vw;
-    }
-
-    #filter-content {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .person-id {
-        width: 50%;
-    }
+    
 
     #buttons {
         position: absolute;
@@ -269,29 +133,9 @@ main {
         padding-bottom: 0.25em;
     }
 
-    #filter-full {
-        margin-top: -1%;
-    }
-
-    #filter-container{
-        padding-top:5%;
-        margin-left:10%;    
-    }
 }
 
 @media all and (min-width:850px) {
-    #filter {
-        display: none;
-    }
-
-    #filter-content {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .person-id {
-        width: 20%;
-    }
 
     header {
         position: absolute;
@@ -308,7 +152,6 @@ main {
     .header-text span {
         background-color: #C9602C;
         color: white;
-        font-size: 5.5vw;
         padding: 8px;
     }
 
@@ -319,9 +162,10 @@ main {
 
     .nav-button {
         margin-right: 0.5em;
-        font-size: 1vw;
+        font-size: 14px;
         height: 3vw;
-        padding: 8px 10px;
+        line-height: 8px;
+        padding: 8px 16px;
     }
 
     nav {
