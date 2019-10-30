@@ -1,6 +1,6 @@
 function addClass(classs){
     let classElements = document.getElementById(classs).querySelectorAll("*")
-    for (var i = 0; i < classElements.length; i++) {
+    for (let i = 0; i < classElements.length; i++) {
         classElements[i].classList.add(classs);
     }
 }
@@ -43,15 +43,14 @@ var personBool = false;
 //give all elements inside class: about, person....
 addClass("about");
 addClass("person");
-addClass("show-filter");
 
 //open or close thickboxes 
 document.addEventListener("click", function (e) {
 
-    if (filterBool == true && e.target.className == "show-filter") {
+    if (filterBool == true && (e.target.id == "show" || e.target.id == "arrow")) {
         closeFilter();
     }
-    else if (filterBool == false && e.target.className == "show-filter") {
+    else if (filterBool == false && (e.target.id == "show" || e.target.id == "arrow" || e.target.id == "show-hide-filter")) {
         openFilter();
     }
 
@@ -98,7 +97,6 @@ function closeAbout() {
 
 function openPerson() {
     personBool = true;
-
     person.style.padding = "2em";
     all.style.display = "block";
     rightButton.style.display = "block";
@@ -166,12 +164,10 @@ window.onresize = function () {
     }
 
     else if (mq.matches && aboutBool) {
-        about.style.left = "20vw";
         about.style.width = "60vw";
     }
 
     else if (aboutBool) {
-        about.style.left = "5vw";
         about.style.width = "90vw";
     }
 }

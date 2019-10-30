@@ -1,26 +1,27 @@
 #about {
-    height: auto;
     width: 0;
+    height: auto;
     position: fixed;
     z-index: 3;
     left: 20vw;
-    top: 5vh;
     background-color: #00adbb;
     color: white;
     overflow-x: hidden;
     transition: 0.5s;
     text-align: center;
-        
+    top: 50%;
+    transform: translateY(-50%);
+
 }
 
 #closebtn {
-    color:white;
+    color: white;
     text-decoration: none;
     font-size: 2em;
     position: absolute;
     right: 15px;
     top: 15px;
-    display:none;
+    display: none;
 }
 
 #seer-human-filter {
@@ -39,10 +40,10 @@
 
 #splitter {
     width: 30vw;
-    padding:1em 0em 1em 0em;
+    padding: 1em 0em 1em 0em;
 }
 
-#must{
+#must {
     color: #a3d9df;
     font-weight: bold;
     font-family: 'Akzidenz Grotesk BE', sans-serif;
@@ -51,18 +52,26 @@
 
 #about-text {
     font-size: 18px;
-    line-height: 27px;   
+    line-height: 27px;
     font-family: 'Akzidenz Grotesk BE', sans-serif;
 }
 
-@media all and (max-width: 850px) {
+@media all and (max-width:426px) {
+    #about {
+        left: 5vw;
+        height: 85vh;
+    }
+}
+
+@media all and (min-width:426px) and (max-width: 850px) {
     #about {
         left: 5vw;
     }
+
     #about-text {
         padding: -10px;
-        line-height: 20px; 
-        font-size:16px; 
+        line-height: 20px;
+        font-size: 16px;
     }
 }
 
@@ -74,8 +83,10 @@
 
     #about {
         left: 15vw;
+        position: absolute;
     }
-    #about-text{
+
+    #about-text {
         padding: 3em 3em 0em 3em;
     }
 }

@@ -76,27 +76,12 @@
     #filter {
         padding-top: 1em;
         margin-top: -1%;
-    }
-
-    #open-filter {
-        border: 1px solid #55AEBB;
-        width: 90%;
-        margin: auto;
-        padding: 4px;
-        height: auto;
-        display: flex;
-        justify-content: center;
-    }
-
-
-
-    #show-hide-filter {
-        font-weight: bold;
-        font-size: 4vw;
+        align-content: center;
+        
     }
 
     #filter-container {
-        margin:auto;
+        margin-left:20vw;
     }
 
 }

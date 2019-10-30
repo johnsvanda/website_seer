@@ -18,7 +18,6 @@ html,body{
     z-index: 1;
     display: none;
     pointer-events: none;
-    overflow: hidden;
     margin: 0;
 }
 
@@ -86,7 +85,6 @@ header {
     }
 
     .nav-button {
-        margin-left: 8px;
         font-size: 3vw;
         padding: 8px 18px;
     }
