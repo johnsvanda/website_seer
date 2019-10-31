@@ -17,7 +17,8 @@ function allowScroll() {
 
 var container = document.getElementById("container");
 var all = document.getElementById("all");
-const mq = window.matchMedia("(min-width: 850px)");
+const widthAbout = window.matchMedia("(min-width: 850px)");
+const widthPerson = window.matchMedia("(min-width: 1018px)");
 
 //About thickbox
 var about = document.getElementById("about");
@@ -27,7 +28,6 @@ var closeButton = document.getElementById("closebtn");
 var person = document.getElementById("person");
 var rightButton = document.getElementById("right-button");
 var leftButton = document.getElementById("left-button");
-var buttonVoid = document.getElementById("button-void");
 
 //Filter
 var filterContent = document.getElementById("filter-content");
@@ -78,10 +78,10 @@ function openAbout() {
     closeButton.style.display = "block";
     disableScroll();
 
-    if (mq.matches) {
+    if (widthAbout.matches) {
         about.style.width = "70vw";
     }
-    else if (!mq.matches) {
+    else if (!widthAbout.matches) {
         about.style.width = "90vw";
     }
 
@@ -98,32 +98,31 @@ function closeAbout() {
 function openPerson() {
     personBool = true;
     person.style.padding = "2em";
+    person.style.display = "block";
     all.style.display = "block";
     rightButton.style.display = "block";
     leftButton.style.display = "block";
     disableScroll();
 
-    buttonVoid.style.display = "block";
 
-    if (mq.matches) {
+    if (widthPerson.matches) {
         person.style.width = "55vw";
     }
-    else if (!mq.matches) {
-        person.style.width = "90vw";
+    else if (!widthPerson.matches) {
+        person.style.width = "80vw";
     }
 
-    buttonVoid.style.height = person.offsetHeight + "px";
-
+    
 }
 
 function closePerson() {
     personBool = false;
     person.style.width = "0";
     person.style.padding = "0";
+    person.style.display = "none";
     all.style.display = "none";
     rightButton.style.display = "none";
     leftButton.style.display = "none";
-    buttonVoid.style.display = "none";
     allowScroll()
 }
 
@@ -149,21 +148,18 @@ function clearFilter() {
 window.onresize = function () {
 
     //align buttons responsively
-    if (personBool) {
-        buttonVoid.style.height = person.offsetHeight + "px";
-    }
-
+  
     //if width is min-width:850px and #person is open
-    if (mq.matches && personBool == true) {
+    if (widthPerson.matches && personBool == true) {
         person.style.width = "55vw";
 
     }
     //else #person
     else if (personBool) {
-        person.style.width = "90vw";
+        person.style.width = "80vw";
     }
 
-    else if (mq.matches && aboutBool) {
+    else if (widthAbout.matches && aboutBool) {
         about.style.width = "60vw";
     }
 

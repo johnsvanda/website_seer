@@ -1,15 +1,7 @@
-#button-void {
-    width: 90vw;
-    position: fixed;
-    z-index: 4;
-    top: 5vh;
-    left: 5vw;
-}
-
 #right-button {
     position: absolute;
-    right: -1.5em;
     top: 50%;
+    transform: translateY(-50%);
     width: 3em;
     z-index: 4;
     display: none;
@@ -17,8 +9,8 @@
 
 #left-button {
     position: absolute;
-    left: -1.5em;
     top: 50%;
+    transform: translateY(-50%);
     width: 3em;
     z-index: 4;
     display: none;
@@ -34,24 +26,18 @@
 }
 
 #person {
-    height: auto;
+    height: 70vh;
     width: 0;
     position: fixed;
     z-index: 3;
-    left: 5vw;
     color: black;
     background-color: white;
-    overflow-x: hidden;
-    padding-top: 40px;
-    text-align: center;
     font-family: 'Akzidenz Grotesk BE', sans-serif;
     font-size: 1.4em;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
-
-
 
 #person-photo {
     width: 12vw;
@@ -84,7 +70,21 @@
 }
 
 
-@media all and (max-width:644px) {
+@media all and (max-width:676px) {
+    #person {
+        height: 80vh;
+        overflow-y:scroll;
+        text-align: center;
+    }
+
+    #right-button {
+        right: calc(10vw - 1.5em);
+    }
+
+    #left-button {
+        left: calc(10vw - 1.5em);
+    }
+
     hr {
         display: none;
     }
@@ -94,18 +94,37 @@
         height: 8em;
     }
 
-
+    #name {
+        text-align: center;
+        padding-top: 0.3em;
+    }
 
     #person-info {
-        line-height: 40px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    #person-text {
+        font-size: 18px;
         text-align: center;
     }
+
 }
 
 
 
-@media all and (min-width:644px) and (max-width: 850px) {
+@media all and (min-width:676px) and (max-width: 1018px) {
+    #person{
+        height: auto;
+        overflow-y:scroll;
+    }
+    #right-button {
+        right: calc(10vw - 1.5em);
+    }
 
+    #left-button {
+        left: calc(10vw - 1.5em);
+    }
 
     #person-char {
         display: flex;
@@ -119,9 +138,10 @@
         line-height: 2.1em;
     }
 
-
     #person-text {
-        margin-top: 5%;
+        margin-top: 2%;
+        position: relative;
+
     }
 
     #person-photo {
@@ -137,20 +157,17 @@
     }
 }
 
-@media all and (min-width:850px) {
+@media all and (min-width:1018px) {
 
-    #button-void {
-        width: 55vw;
-        position: fixed;
-        z-index: 4;
-        top: 15vh;
-        left: 22.5vw;
+    #person{
+        height: auto;
+    }
+    #right-button {
+        right: calc(22.5vw - 1.5em);
     }
 
-    #person {
-        height: auto;
-        top: 15vh;
-        left: 22.5vw;
+    #left-button {
+        left: calc(22.5vw - 1.5em);
     }
 
     #person-char {
