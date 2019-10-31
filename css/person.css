@@ -37,6 +37,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display:none;
 }
 
 #person-photo {
@@ -161,6 +162,7 @@
 
     #person{
         height: auto;
+        display:none;
     }
     #right-button {
         right: calc(22.5vw - 1.5em);

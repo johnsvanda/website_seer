@@ -1,20 +1,3 @@
-function addClass(classs){
-    let classElements = document.getElementById(classs).querySelectorAll("*")
-    for (let i = 0; i < classElements.length; i++) {
-        classElements[i].classList.add(classs);
-    }
-}
-
-function disableScroll() {
-    container.style.position = "fixed";
-    container.style.overflow = "hidden";
-}
-
-function allowScroll() {
-    container.style.position = "relative";
-    container.style.overflow = "scroll";
-}
-
 var container = document.getElementById("container");
 var all = document.getElementById("all");
 const widthAbout = window.matchMedia("(min-width: 850px)");
@@ -45,6 +28,23 @@ addClass("about");
 addClass("person");
 
 //open or close thickboxes 
+function addClass(classs){
+    let classElements = document.getElementById(classs).querySelectorAll("*")
+    for (let i = 0; i < classElements.length; i++) {
+        classElements[i].classList.add(classs);
+    }
+}
+
+function disableScroll() {
+    container.style.position = "fixed";
+    container.style.overflow = "hidden";
+}
+
+function allowScroll() {
+    container.style.position = "relative";
+    container.style.overflow = "scroll";
+}
+
 document.addEventListener("click", function (e) {
 
     if (filterBool == true && (e.target.id == "show" || e.target.id == "arrow")) {
@@ -112,7 +112,6 @@ function openPerson() {
         person.style.width = "80vw";
     }
 
-    
 }
 
 function closePerson() {
@@ -144,17 +143,14 @@ function clearFilter() {
     var clist = document.getElementsByTagName("input");
     for (var i = 0; i < clist.length; ++i) { clist[i].checked = false; }
 }
+
 //maintaining thickbox responsivity 
 window.onresize = function () {
-
-    //align buttons responsively
   
-    //if width is min-width:850px and #person is open
     if (widthPerson.matches && personBool == true) {
         person.style.width = "55vw";
 
     }
-    //else #person
     else if (personBool) {
         person.style.width = "80vw";
     }
